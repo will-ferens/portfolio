@@ -3,10 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  Redirect 
+  Link
 } from 'react-router-dom'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { 
   TransitionGroup,
   CSSTransition
@@ -16,21 +14,53 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
 
+import {ICONS} from './constants'
+
 class App extends Component {
   render() {
     return (
-    <Router>
+    <Router className="wrapper">
       <Route render={({ location }) =>  (
-        <div className="body">
+      <div>
         <div className="header">
+          <div className="navbar">
+            <ul className="nav">
+              <li className="nav-item"><Link to="/about">About</Link></li>
+              <li className="nav-item"><Link to="/projects">Projects</Link></li>
+            </ul>
+            <ul className="links" >
+              <li className="nav-item">
+                <svg width="17" height="17" viewBox="0 0 1024 1024" >
+                  <path d={ICONS.TWITTER}></path>
+                  
+                </svg>
+              </li>
+              <li className="nav-item">
+                <svg width="17" height="17" viewBox="0 0 1024 1024">
+                  <path d={ICONS.GITHUB}></path>
+                </svg>
+              </li>
+              <li className="nav-item">
+                <svg width="22" height="22" viewBox="0 0 1024 1024">
+                  <path d={ICONS.LINKEDIN}></path>
+                </svg>
+              </li>
+              <li className="nav-item">
+                <svg width="17" height="17" viewBox="0 0 1024 1024">
+                  <path d={ICONS.EMAIL}></path>
+                </svg>
+              </li>
+            </ul>
 
-        <ul className="nav">
-          <li className="nav-item"><Link to="/">Home</Link></li>
-          <li className="nav-item"><Link to="/about">About</Link></li>
-          <li className="nav-item"><Link to="/projects">Projects</Link></li>
-        </ul>
-        <div>
-          <TransitionGroup>
+          </div>
+          
+        </div>
+        <div className="body">
+          <Route 
+            exact 
+            path="/" 
+            component={Hero} />
+          <TransitionGroup className="page-wrapper">
             <CSSTransition
               key={location.key}
               timeout={1000}
@@ -39,22 +69,18 @@ class App extends Component {
               <Switch location={location}>
                 <Route 
                   exact 
-                  path="/" 
-                  component={Hero} />
-                <Route 
-                  exact 
                   path="/about" 
                   component={About} />
                   <Route 
                   exact 
                   path="/projects" 
                   component={Projects} />
-                <Route render={() => <div className="page"><h1>Not Found</h1></div>} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>
         </div>
-      </div>
+        <div className="footer">
+        </div>
       </div>
       )} />
     </Router>
