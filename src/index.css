@@ -1,0 +1,160 @@
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    color: white;
+}
+.body {
+    display: flex;
+    font-family: sans-serif;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2.3em 0;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+}
+
+.nav {
+    display: flex;
+    align-self: center;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.nav-item {
+    display: inline;
+    padding: 0 1.4em 0 0;
+    text-decoration: none;
+    margin: 10px;
+}
+.nav-item a {
+    text-decoration: none;
+    color: white;
+}
+.nav-item a:visited {
+    text-decoration: none;
+    color: #7889F1;
+}
+.nav-item a:hover {
+    color: #F17886;
+    transition: .3s;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+}
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-appear-active,
+.fade-enter-active {
+  transition: opacity .3s linear;
+  opacity: 1;
+}
+
+.fade-exit {
+  transition: opacity .2s linear;
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
+
+/* PROJECTS ======================================================================== */
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    width: 20vw;
+    border: 1px solid #F17886;
+    border-radius: 1%;
+    margin: 10px;
+}
+
+.card:hover ~ body {
+    background-color: white;
+    transition: .3s;
+}
+
+.head {
+    display: flex;
+    height: 80%;
+    background: url(./assets/haiku-you.jpg)
+}
+
+.title {
+    display: flex;
+    align-self: flex-end;
+    padding: 5px;
+    padding-left: 10px; 
+    width: 100%;
+    border-top: 1px solid #F17886;
+}
+.modal-button {
+    display:flex;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:sans-serif;
+    font-size: 1em;
+    font-weight:300;
+    color: white;
+    text-align:center;
+    transition: all 0.2s;
+}
+.modal-button:hover {
+    color:#F17886;
+    background-color: white;
+}
+.modal {
+    animation-name: modalFade;
+    animation-duration: 1s;
+    position: absolute;
+    z-index: 1000;
+    transition: .3s;
+}
+
+
+.backdrop {
+    position: fixed;
+    animation-name: backdropFade;
+    animation-duration: 1s;
+    width: 1000%;
+    height: 1000%;
+    z-index: 999;
+    background: black;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes modalFade {
+    from {transform: translateY(-50%);opacity: 0;}
+    to {transform: translateY(0);opacity: 1;}
+}
+
+@keyframes backdropFade {
+    from {transform: translateY(-50%);opacity: 0;}
+    to {transform: translateY(0);opacity: .7;}
+}
