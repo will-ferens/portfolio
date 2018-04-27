@@ -45,6 +45,7 @@ body,
 .nav-item a {
     text-decoration: none;
     color: white;
+    fill: white;
 }
 .nav-item a:visited {
     text-decoration: none;
@@ -52,6 +53,7 @@ body,
 }
 .nav-item a:hover {
     color: #DAF1D8;
+    fill: #8A83BB;
     transition: .3s;
 }
 
@@ -91,56 +93,74 @@ body,
 }
 
 .fade-exit-active {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* PROJECTS ======================================================================== */
 .card-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .card {
-    display: flex;
-    flex-direction: row;
+    flex: 0 1 20%;
     height: 60vh;
-    width: 20vw;
     border: 1px solid #DAF1D8;
     border-radius: 1%;
-    margin: 10px;
+}
+
+#card-1 {
+    background: url('./assets/haiku-you.jpg');
+    background-size: cover;
+}
+
+#card-1:hover {
+
+}
+
+#card-2 {
+    background: url('./assets/fridge.jpg');
+    background-size: cover;
+}
+#card-2:hover {
+    
+}
+#card-3 {
+    background: url('./assets/books.jpg');
+    background-size: cover;
+}
+#card-3:hover {
+    
+}
+#card-4 {
+    background: url('./assets/score.jpg');
+    background-size: cover;
+}
+#card-4:hover {
+    
 }
 
 
-.head {
-    display: flex;
-    height: 80%;
-    background: url(./assets/haiku-you.jpg)
-}
 
-.title {
-    display: flex;
-    align-self: flex-end;
-    padding: 5px;
-    padding-left: 10px; 
-    width: 100%;
-    border-top: 1px solid #DAF1D8;
-}
+
 .modal-button {
     display:flex;
     border: 1px solid #FFFFFF;
-    background-color: rgba(0, 0, 0, 0);
+    border-left: none;
+    background-color: white;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:sans-serif;
     font-size: 1em;
     font-weight:300;
-    color: white;
+    color:#8A83BB;
     text-align:center;
     transition: all 0.2s;
 }
 .modal-button:hover {
-    color:#8A83BB;
-    background-color: white;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
 }
 .modal {
     animation-name: modalFade;
@@ -174,4 +194,27 @@ body,
 @keyframes backdropFade {
     from {transform: translateY(-50%);opacity: 0;}
     to {transform: translateY(0);opacity: .7;}
+}
+
+@media screen and (min-width: 980px) {
+    .card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+
+@media screen and (max-width: 979px) {
+    .card {
+        flex: 0 1 calc(50% - 1em)
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        flex: 0 1 calc(80% - 1em)
+    }
 }

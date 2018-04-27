@@ -13,6 +13,7 @@ import {
 import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
+import Resume from './components/Resume'
 
 import {ICONS} from './constants'
 
@@ -27,28 +28,34 @@ class App extends Component {
             <ul className="nav">
               <li className="nav-item"><Link to="/about">ABOUT</Link></li>
               <li className="nav-item"><Link to="/projects">PROJECTS</Link></li>
+              <li className="nav-item"><Link to="/resume">RESUME</Link></li>
             </ul>
             <ul className="links" >
               <li className="nav-item">
-                <svg width="17" height="17" viewBox="0 0 1024 1024" >
-                  <path d={ICONS.TWITTER}></path>
-                  
-                </svg>
+                <a href="https://twitter.com/will_ferens">
+                  <svg width="17" height="17" viewBox="0 0 1024 1024" >
+                    <path d={ICONS.TWITTER}></path>
+                  </svg>
+                </a>
               </li>
               <li className="nav-item">
-                <svg width="17" height="17" viewBox="0 0 1024 1024">
+                <a href="https://github.com/will-ferens"><svg width="17" height="17" viewBox="0 0 1024 1024">
                   <path d={ICONS.GITHUB}></path>
-                </svg>
+                </svg></a>
               </li>
               <li className="nav-item">
-                <svg width="22" height="22" viewBox="0 0 1024 1024">
-                  <path d={ICONS.LINKEDIN}></path>
-                </svg>
+                <a href="https://www.linkedin.com/in/will-ferens/">
+                  <svg width="22" height="22" viewBox="0 0 1024 1024">
+                    <path d={ICONS.LINKEDIN}></path>
+                  </svg>
+                </a>
               </li>
               <li className="nav-item">
-                <svg width="17" height="17" viewBox="0 0 1024 1024">
-                  <path d={ICONS.EMAIL}></path>
-                </svg>
+                <a href="mailto:will.ferens@gmail.com">
+                  <svg width="17" height="17" viewBox="0 0 1024 1024">
+                    <path d={ICONS.EMAIL}></path>
+                  </svg>
+                </a>
               </li>
             </ul>
 
@@ -75,6 +82,10 @@ class App extends Component {
                   exact 
                   path="/projects" 
                   component={Projects} />
+                  <Route 
+                  exact 
+                  path="/resume" 
+                  component={Resume} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>
