@@ -25,8 +25,8 @@ class App extends Component {
         <div className="header">
           <div className="navbar">
             <ul className="nav">
-              <li className="nav-item"><Link to="/about">About</Link></li>
-              <li className="nav-item"><Link to="/projects">Projects</Link></li>
+              <li className="nav-item"><Link to="/about">ABOUT</Link></li>
+              <li className="nav-item"><Link to="/projects">PROJECTS</Link></li>
             </ul>
             <ul className="links" >
               <li className="nav-item">
