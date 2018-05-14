@@ -1,2 +1,5 @@
 # Portfolio Site
-*Showcase of all projects to date*
+
+*A professional showcase of noteworthy projects, about me, and resume*
+
+![Personal Site Projects Page]("/proj.png")

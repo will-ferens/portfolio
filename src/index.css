@@ -6,6 +6,7 @@ body,
     width: 100%;
     color: white;
     background-image: linear-gradient(to top, #8A83BB 0%, #4BD2DE 100%);
+    background-attachment: fixed;
     font-family: Ailerion;
     fill: currentColor;
 }
@@ -195,6 +196,42 @@ body,
     from {transform: translateY(-50%);opacity: 0;}
     to {transform: translateY(0);opacity: .7;}
 }
+
+/* RESUME =========================================================== */
+
+#resume-pic {
+    display: flex;
+    align-self: center;
+    width: 33.25%;
+    height: 43.62%;
+}
+
+.resume-links {
+    display: flex;
+    justify-content: center;
+}
+
+.rlink {
+    padding: 10px;
+    margin-bottom: 7px;
+    font-size: 1.3em;
+}
+
+.rlink, a {
+    text-decoration: none;
+    color: white;
+    fill: white;
+}
+.rlink, a:visited {
+    text-decoration: none;
+    color: #4BD2DE;
+}
+.rlink, a:hover {
+    color: #DAF1D8;
+    fill: #8A83BB;
+    transition: .3s;
+}
+
 
 @media screen and (min-width: 980px) {
     .card-wrapper {
