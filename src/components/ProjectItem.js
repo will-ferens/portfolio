@@ -40,7 +40,6 @@ class ProjectItem extends Component {
                 </div>  
             </div>
             <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()} whichModal={this.state.whichModal}>
-                <h1>poop</h1>    
             <button onClick={() => this.closeModal()}>close</button>
             </Modal>
             <div className="card" id="card-2">

@@ -31,6 +31,7 @@ body,
 .navbar {
     display: flex;
     justify-content: space-between;
+    margin-left: -38px;
     font-family: sans-serif;   
     flex-wrap: row nowrap; 
 }
@@ -96,6 +97,21 @@ body,
 .fade-exit-active {
     opacity: 0;
 }
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.jumbo { 
+    border-right: .1em solid black;
+    padding-right: 12px;
+    font-size: 3em;
+    width: 16.5em; 
+    width: 21ch;
+    margin: 2em 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 2s steps(25, end),
+            blink-caret .5s step-end infinite alternate;
+}
 
 /* PROJECTS ======================================================================== */
 .card-wrapper {
@@ -141,9 +157,6 @@ body,
     
 }
 
-
-
-
 .modal-button {
     display:flex;
     border: 1px solid #FFFFFF;
@@ -171,6 +184,29 @@ body,
     transition: .3s;
 }
 
+
+.modal-button-open {
+    border: 1px solid #FFFFFF;
+    background-color: white;
+    border-radius:0.12em;
+    margin: 1em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:sans-serif;
+    font-size: 1em;
+    font-weight:300;
+    color:#8A83BB;
+    text-align:center;
+    transition: all 0.2s;
+}
+.modal-button-open:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-button-open a {
+    color: #4BD2DE;
+}
 
 .backdrop {
     position: fixed;
@@ -230,6 +266,23 @@ body,
     color: #DAF1D8;
     fill: #8A83BB;
     transition: .3s;
+}
+
+
+/*ABOUT ========================================= */
+
+#head-shot {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+#bio {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 33%;
 }
 
 

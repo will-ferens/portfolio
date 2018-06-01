@@ -3,8 +3,7 @@ import ProjectItem from './ProjectItem';
 
 
 
-class Projects extends Component {
-  render() {
+const Projects = () => {
     return (
       <div className="page">
         <h1>Projects</h1>
@@ -12,7 +11,7 @@ class Projects extends Component {
       </div>
     )
   }
-}
+
 
 
 export default Projects

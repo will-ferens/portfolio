@@ -6,9 +6,8 @@ class Hero extends Component {
   render() {
     return (
       <div className="hero-page">
-        <h1 className="jumbo">WILL FERENS</h1>
-        <h3 className="jumbo">WEB DEVELOPER</h3>
-        
+        <h1 className="jumbo">Will Ferens: Web Developer</h1>
+        <h3 className="jumbo"></h3>
       </div>
     )
   }
